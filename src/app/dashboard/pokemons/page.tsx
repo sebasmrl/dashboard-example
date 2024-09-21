@@ -1,5 +1,13 @@
 import { PokemonGrid } from "@/pokemons/components";
 import { PokemonsResponse, SimplePokemon } from "@/pokemons/interfaces";
+import { Metadata } from "next";
+
+
+export const metadata: Metadata = {
+  title: "Pokemons",
+  description: "Encuentra el pokemon que más te guste",
+};
+
 
 
 const getPokemons = async(limit=10, offset=0):Promise<SimplePokemon[]> =>{
