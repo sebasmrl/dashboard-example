@@ -26,14 +26,14 @@ export const PokemonCard = ({ pokemon }: Props) => {
                        height={0}
                        priority={false}
                        //className='w-full h-auto'
-                       style={ {width:'100px', height:'auto'}}
+                       style={ {width:'100px', height:'100px'}}
                      />
                     <p className="pt-2 text-lg font-semibold text-gray-50 capitalize">{ name }</p>
                     <p className="text-sm text-gray-100">sebasmrl@email.com</p>
                     <div className="mt-5">
                         <Link
                             prefetch={true}
-                            href={`/dashboard/pokemons/${id}`}
+                            href={`/dashboard/pokemons/${name}`}
                             className="border rounded-full py-2 px-4 text-xs font-semibold text-gray-100"
                         >
                             Leer más

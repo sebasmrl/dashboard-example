@@ -10,6 +10,18 @@ interface Props{
     };
 }
 
+//gsp
+export async function generateStaticParams(){
+  //regresar un arreglo con todos los params que queremos para hacer las paginas - //!EN BUILD-TIME
+  const static151Pokemons = Array.from({ length:151}).map( (v,i)=> `${i+1}`);
+  return static151Pokemons.map((value)=>({
+    id: value
+  }));   //return [ { id: '1'}, { id: '2'}, ]
+  
+}
+
+
+
 export async function generateMetadata({ params }:Props):Promise<Metadata>{
   try{
     const { id, name } = await getPokemonById(params.id);
